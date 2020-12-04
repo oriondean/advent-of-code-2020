@@ -17,7 +17,10 @@ def find_sum_of_three(list: list[int], sum: int):
                     return [itemA, itemB, itemC]
 
 if __name__ == '__main__':
-    input: list[str] = open('input.txt').read().split()
+    with open('input.txt') as file:
+        input: list[str] = file.read().split()
+        file.close()
+
     expenses: list[int] = list(map(int, input))
 
     resultOne: [int, int] = find_sum_of_two(expenses, 2020)
