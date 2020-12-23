@@ -1,6 +1,7 @@
 import re
 from functools import reduce
 
+
 def parse_rule(rule_raw):
     return {
         'field': rule_raw.group(1),
@@ -26,6 +27,7 @@ def read_input():
                 tickets.append(list(map(int, line.split(','))))
 
     return tickets, rules, tickets[0]
+
 
 def passes_condition(condition, value):
     conditions = condition['conditions']
